@@ -2,13 +2,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cloudtruth
+  name: cloudtruth-with-argo-cd
 spec:
   project: default
   source:
-    repoURL: https://github.com/cloud37/argocd-with-cloudtruth.git
+    repoURL: https://github.com/cloud37/cloudtruth.git
     targetRevision: main
-    path: apps/cloudtruth
+    path: apps/cloudtruth-with-argo-cd
   destination:
     server: https://kubernetes.default.svc
     namespace: default
