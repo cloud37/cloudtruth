@@ -4,11 +4,11 @@ kind: Application
 metadata:
   name: cloudtruth-with-argo-cd-and-helm
 spec:
-  project: default
+  project: cloudtruth
   source:
     repoURL: https://github.com/cloud37/cloudtruth.git
     targetRevision: main
     path: apps/cloudtruth-with-argo-cd-and-helm
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: cloudtruth
