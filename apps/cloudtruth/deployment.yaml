@@ -3,17 +3,17 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: flask
-  name: flask
+    app: cloudtruth
+  name: cloudtruth
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flask
+      app: cloudtruth
   template:
     metadata:
       labels:
-        app: flask
+        app: cloudtruth
     spec:
       containers:
         - name: flask
@@ -24,4 +24,4 @@ spec:
       volumes:
         - name: config-volume
           configMap:
-            name: flask-map
+            name: cloudtruth
