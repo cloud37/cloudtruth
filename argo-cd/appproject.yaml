@@ -1,0 +1,27 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: cloudtruth
+spec:
+
+  description: Project for deploying Cloudtruth-related applications
+
+  destinations:
+    - server: https://kubernetes.default.svc
+      namespace: cloudtruth
+
+  sourceRepos:
+    - https://github.com/cloud37/cloudtruth.git
+
+  namespaceResourceWhitelist:
+    - group: ""
+      kind: ConfigMap
+    - group: ""
+      kind: Pod
+    - group: ""
+      kind: Service
+    - group: apps
+      kind: Deployment
+    - group: apps
+      kind: ReplicaSet
