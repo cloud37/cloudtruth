@@ -3,11 +3,11 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: flask
-  name: flask
+    app: cloudtruth
+  name: cloudtruth
 spec:
   selector:
-    app: flask
+    app: cloudtruth
   ports:
     - protocol: TCP
       port: 3000
