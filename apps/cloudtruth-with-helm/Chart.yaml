@@ -1,0 +1,4 @@
+---
+apiVersion: v2
+name: cloudtruth-with-helm
+version: 1.0.0
