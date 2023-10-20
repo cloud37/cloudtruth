@@ -3,8 +3,8 @@ apiVersion: v1
 kind: ConfigMap 
 metadata:
   labels:
-    app: flask
-  name: flask
+    app: cloudtruth
+  name: cloudtruth
 data:
    FLASK_APP: "<FLASK_APP>"
    FLASK_ENV: "<FLASK_ENV>"
