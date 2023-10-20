@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cloudtruth-with-argo-cd
+  name: cloudtruth-with-argo-cd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudtruth-with-argo-cd
+  template:
+    metadata:
+      labels:
+        app: cloudtruth-with-argo-cd
+    spec:
+      containers:
+      - name: flask
+        image: diosodtuono/flask-argo:v1
+        volumeMounts:
+        - name: config-volume
+          mountPath: /etc/config
+      volumes:
+        - name: config-volume
+          configMap:
+            name: cloudtruth-with-argo-cd
