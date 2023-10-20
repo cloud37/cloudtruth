@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: cloudtruth-with-argo-cd
+  name: cloudtruth-with-argo-cd
+spec:
+  selector:
+    app: cloudtruth-with-argo-cd
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
