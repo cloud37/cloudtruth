@@ -3,24 +3,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: flask-app
-  name: flask-app
+    app: flask
+  name: flask
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: flask-app
+      app: flask
   template:
     metadata:
       labels:
-        app: flask-app
+        app: flask
     spec:
       containers:
-      - name: flaskdemo-argo
-        image: diosodtuono/flask-argo:v1
-        volumeMounts:
-        - name: config-volume
-          mountPath: /etc/config
+        - name: flask
+          image: diosodtuono/flask-argo:v1
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
       volumes:
         - name: config-volume
           configMap:
