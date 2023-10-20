@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cloudtruth-with-argocd-and-helm
+  name: cloudtruth-with-argo-cd-and-helm
   labels:
-    app: cloudtruth-with-argocd-and-helm
+    app: cloudtruth-with-argo-cd-and-helm
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cloudtruth-with-argocd-and-helm
+      app: cloudtruth-with-argo-cd-and-helm
   template:
     metadata:
       labels:
-        app: cloudtruth-with-argocd-and-helm
+        app: cloudtruth-with-argo-cd-and-helm
     spec:
       containers:
         - name: flask
@@ -24,4 +24,4 @@ spec:
       volumes:
         - name: config-volume
           configMap:
-            name: cloudtruth-with-argocd-and-helm
+            name: cloudtruth-with-argo-cd-and-helm
