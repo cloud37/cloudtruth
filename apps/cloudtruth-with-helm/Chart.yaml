@@ -1,4 +1,4 @@
 ---
 apiVersion: v2
-name: cloudtruth-with-helm
+name: cloudtruth-with-argocd-and-helm
 version: 1.0.0
